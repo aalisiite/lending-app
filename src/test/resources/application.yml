@@ -7,4 +7,4 @@ spring:
       ddl-auto: validate
   liquibase:
     change-log: classpath:/liquibase/updates.xml
-    enabled: false
+    

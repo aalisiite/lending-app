@@ -1,5 +1,7 @@
 package lendingapp.demo;
 
+import lendingapp.demo.repository.service.customer.CustomerService;
+import lendingapp.demo.repository.service.time.TimeSupplier;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -9,9 +11,11 @@ import java.time.LocalDateTime;
 public class TestingController {
 
     private TimeSupplier timeSupplier;
+    private CustomerService service;
 
-    public TestingController(TimeSupplier timeSupplier) {
+    public TestingController(TimeSupplier timeSupplier, CustomerService service) {
         this.timeSupplier = timeSupplier;
+        this.service = service;
     }
 
     @PostMapping("/reset-time")
@@ -30,6 +34,7 @@ public class TestingController {
     }
 
     @PostMapping("/clear-database")
-    public void deleteTime() {
+    public void clearDatabase() {
+        service.clearDatabase();
     }
 }

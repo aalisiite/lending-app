@@ -2,16 +2,16 @@ package lendingapp.demo.api;
 
 import java.util.Objects;
 
-public class Customer {
+public class Costumer {
     private Long Id;
     private String email;
     private String password;
 
-    public Customer(Long Id, String email, String password) {
+    public Costumer(Long Id, String email, String password) {
         this.email = email;
         this.password = password;
     }
-    public Customer(){
+    public Costumer(){
         
     }
 
@@ -42,8 +42,8 @@ public class Customer {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Customer)) return false;
-        Customer customer = (Customer) o;
+        if (!(o instanceof Costumer)) return false;
+        Costumer customer = (Costumer) o;
         return email.equals(customer.email);
     }
 

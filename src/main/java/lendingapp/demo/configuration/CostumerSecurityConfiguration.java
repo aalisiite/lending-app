@@ -1,6 +1,6 @@
 package lendingapp.demo.configuration;
 
-import lendingapp.demo.service.Role;
+import lendingapp.demo.repository.service.Role;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
